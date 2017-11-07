@@ -1,0 +1,197 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{parskip}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{wrapfig}
+\usepackage{mwe}
+\usepackage{libertine}
+\usepackage{inconsolata}
+\usepackage{hyperref}
+
+\newcommand\theversion{0.9.0-git}
+\newcommand\thegame{One Man's Trash}
+
+\hypersetup{
+  hidelinks,
+  pdftitle={\thegame{} v\theversion}
+}
+
+\setcounter{secnumdepth}{4}
+\renewcommand{\sectionautorefname}{§}
+\renewcommand{\subsectionautorefname}{§}
+\renewcommand{\subsubsectionautorefname}{§}
+\renewcommand{\paragraphautorefname}{¶}
+
+\newcommand\copyrightfooter{
+  \medskip
+  \hrule
+
+  {
+    \small
+    \includegraphics[scale=0.5]{cc-by.eps}\\
+    This work is licensed under the Creative Commons Attribution 4.0
+    International License. To view a copy of this license, visit
+    \url{http://creativecommons.org/licenses/by/4.0/} or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+  }
+}
+
+\begin{document}
+\title{\thegame{}\\ \large A card game, v\theversion}
+\author{Johann Tutor}
+\date{\today}
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+\section{Requirements}
+\label{sec:requirements}
+
+\thegame{} requires 2 -- 6 players and a standard deck of cards (with 2 Jokers if available).
+
+If Jokers are available, then these Jokers are considered the ``Trash Collectors''.
+
+If Jokers are not available, remove two Aces.
+The two remaining Aces are considered the Trash Collectors.
+
+\section{Setup}
+\label{sec:setup}
+
+\begin{enumerate}
+  \item Determine a player order.
+  \item Shuffle the deck.
+  \item Deal 3 cards to each player. The players may look at their dealt hands.
+  \item Deal 3 cards face-up on the table to form three Trash Piles.
+  \item Put the remaining cards face-down to form the Draw Pile.
+\end{enumerate}
+
+\section{Rules}
+\label{sec:rules}
+
+The aim of the game is to empty your hand by trashing a four-of-a-kind on to a Trash Pile.
+
+\subsection{Gameplay}
+\label{sec:gameplay}
+
+Play proceeds in turns. On your turn, you must perform one of four actions: pick up from the Draw Pile, trash a card, create a new Trash Pile, or swap a card.
+
+If you run out of cards in your hand and you did not meet the win condition, you lose and are out of the game.
+
+\subsubsection{Pick Up From the Draw Pile}
+\label{sec:pickup}
+
+On your turn, you may choose to draw from the Draw Pile to add a card to your hand.
+
+\paragraph{} \label{par:drawnormal}
+Draw one card from the Draw Pile and add it to your hand. Your turn ends and play proceeds to the next player.
+
+\paragraph{} \label{par:drawempty}
+You may not pick up from the Draw Pile if the Draw Pile is empty.
+
+\subsubsection{Trash a Card}
+\label{sec:trashcard}
+
+On your turn, you may choose to trash a card to remove a card from your hand.
+
+\paragraph{} \label{par:trashvalid}
+Place the card you want to trash on the top of a Trash Pile whose top card is no more than one rank away from the card you want to trash. Suits are not significant. For example, if the top card of a Trash pile has a rank of 7, you can trash any card with a rank of 6, 7 or 8.
+
+\paragraph{} \label{par:trashwraparound}
+The rank ``wraps around'', so you may place an Ace on a King and vice versa. If Aces are used as Trash Collectors, then King and 2 are adjacent ranks.
+
+\paragraph{} \label{par:trashmultiple}
+You may trash multiple cards together on the same Trash Pile as long as all cards being trashed have the same rank.
+
+\paragraph{} \label{par:trashmultiplepiles}
+You may not trash on more than one Trash Pile per turn.
+
+\paragraph{} \label{par:trashwild}
+Trash Collectors are wild, so any card may be placed on a Trash Collector, including another Trash Collector.
+
+\paragraph{} \label{par:trashplayoncollector}
+If a card is trashed on a Trash Collector, pick up the Trash Collector and place it in your hand.
+
+\paragraph{} \label{par:trashplaycollector}
+If a Trash Collector is played on a Trash Pile, collect the rest of the Trash Pile and place it in your hand. Leave the Collector on the table.
+
+Your turn ends after your card has been trashed.
+
+\subsubsection{Create a New Trash Pile}
+\label{sec:createtrashpile}
+
+On your turn, you may choose to create a new Trash Pile.
+
+\paragraph{} \label{par:createcreate}
+Place a single card on the table to form a new Trash Pile. Multiple cards may not be used to create a new Trash Pile.
+
+\paragraph{} \label{par:createrestriction}
+You may not create a new Trash Pile if the card you play is a valid play on any other Trash Pile. In particular, this means that any Trash Collectors present on the table prevents new Trash Piles from being created because any card is a valid play on it.
+
+Your turn ends when the pile is created.
+
+\subsubsection{Swap a Card}
+\label{sec:swap}
+
+On your turn, you may choose to swap cards from your hand with the top cards on a Trash Pile.
+
+\paragraph{} \label{par:swaptop}
+Swap a card from your hand with the top card of a Trash Pile.
+
+\paragraph{} \label{par:swapmultiple}
+You may swap multiple cards from your hand if the cards have the same rank and if there are at least the same number of cards on the top of the Trash Heap with the same rank. For example, if the top of the Trash Heap has two 4s and you have two 8s in your hand, you may swap those two 8s for those two 4s.
+
+\paragraph{} \label{par:swaprestriction}
+You may not swap cards if the card you swap from your hand is a valid play on any Trash Pile. This means that you may not swap cards of the same rank (e.g. a 2 for a 2), nor can you swap when there is a Trash Collector on the table. Note that playing on a Trash Collector is considered trashing and not a swap, and it may be done even if that card can otherwise be played on another Trash Pile.
+
+Your turn ends after the swap.
+
+\subsection{Winning}
+\label{sec:winning}
+
+To win, you must empty your hand by trashing four cards of the same rank together. Remember that it is illegal to create a new Trash Pile with more than one card, so this four-of-a-kind must be trashed on an existing Pile.
+
+Your hand must be empty at the end of your turn to win. Notably, playing a four-of-a-kind on a Trash Collector does not constitute a win because the Trash Collector is in your hand at the end of your turn, leaving your hand not empty.
+
+If you run out of cards without having emptied it by trashing a four-of-a-kind, you lose.
+
+If you are the last remaining player, you neither win nor lose.
+
+\copyrightfooter
+
+\newpage
+\appendix
+\section{Glossary}
+\label{sec:glossary}
+
+\begin{description}
+  \item[Draw Pile] (\autoref{sec:pickup})\\
+    The pile containing cards not in either a player's hand nor in a Trash Pile. Players draw from this to gain more cards.
+  \item[Trash Collector] (\autoref{sec:requirements})\\
+    The two Jokers, or the two Aces in play if Jokers are not available. Their use is described in \autoref{par:trashplaycollector} and \autoref{par:trashplaycollector}.
+  \item[Trash Pile] (\autoref{sec:setup})\\
+    A pile on which cards can be trashed. A four-of-a-kind must be trashed on to one of these to win. Their use is described in \autoref{sec:trashcard}, \autoref{sec:createtrashpile} and \autoref{sec:swap}.
+  \item[Trashing] (\autoref{sec:trashcard})\\
+    To play a card on a Trash Pile.
+\end{description}
+
+\newpage
+\section{Credits}
+\label{sec:credits}
+
+\thegame{} was developed by:
+Bruce Chen,
+Filip Francetic,
+David Lee,
+Nicholas Offer,
+Akshaya Senthil,
+Johann Tutor.
+
+This document was written by:
+Johann Tutor.
+
+\copyrightfooter
+
+\end{document}
