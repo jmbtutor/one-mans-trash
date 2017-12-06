@@ -76,7 +76,7 @@ The aim of the game is to empty your hand by trashing a four-of-a-kind on to a T
 \subsection{Gameplay}
 \label{sec:gameplay}
 
-Play proceeds in turns. On your turn, you must perform one of five actions: pick up from the Draw Pile, trash a card, collect the trash, create a new Trash Pile, or swap a card.
+Play proceeds in turns. On your turn, you must perform one of five actions: pick up from the Draw Pile, trash a card, collect the trash, litter, or swap a card.
 
 If you run out of cards in your hand and you did not meet the win condition, you lose and are out of the game.
 
@@ -137,18 +137,18 @@ You may not collect more than one Trash Pile per turn. You may not play more tha
 
 Your turn ends when the Trash Pile is collected.
 
-\subsubsection{Create a New Trash Pile}
-\label{sec:createtrashpile}
+\subsubsection{Litter}
+\label{sec:litter}
 
-On your turn, you may choose to create a new Trash Pile.
+On your turn, you may choose to ``litter'' (create a new Trash Pile).
 
-\paragraph{} \label{par:createcreate}
+\paragraph{} \label{par:littercreate}
 Place a single card on the table to form a new Trash Pile. Multiple cards may not be used to create a new Trash Pile.
 
-\paragraph{} \label{par:createrestriction}
+\paragraph{} \label{par:litterrestriction}
 You may not create a new Trash Pile if the card you play is a valid play on any other Trash Pile. In particular, this means that any Trash Collectors present on the table prevents new Trash Piles from being created because any card is a valid play on it. Similarly, you may not create a new Trash Pile with a Trash Collector because it is a valid play on any existing Trash Pile.
 
-Your turn ends when the pile is created.
+Your turn ends when the new Pile is created.
 
 \subsubsection{Swap a Card}
 \label{sec:swap}
@@ -169,7 +169,7 @@ Your turn ends after the swap.
 \subsection{Winning}
 \label{sec:winning}
 
-To win, you must empty your hand by trashing four cards of the same rank together. Remember that it is illegal to create a new Trash Pile with more than one card, so this four-of-a-kind must be trashed on an existing Pile.
+To win, you must empty your hand by trashing four cards of the same rank together. Remember that it is illegal to litter with more than one card (\autoref{par:littercreate}), so this four-of-a-kind must be trashed on an existing Pile.
 
 Your hand must be empty at the end of your turn to win. Notably, playing a four-of-a-kind on a Trash Collector does not constitute a win because the Trash Collector is in your hand at the end of your turn, leaving your hand not empty.
 
@@ -187,10 +187,12 @@ If you are the last remaining player, you neither win nor lose.
 \begin{description}
   \item[Draw Pile] (\autoref{sec:draw})\\
     The pile containing cards not in either a player's hand nor in a Trash Pile. Players draw from this to gain more cards.
+  \item[Literring] (\autoref{sec:litter})\\
+    Creating a new Trash Pile.
   \item[Trash Collector] (\autoref{sec:requirements})\\
     The two Jokers, or the two Aces in play if Jokers are not available. Their use is described in \autoref{par:trashplaycollector} and \autoref{par:trashplaycollector}.
   \item[Trash Pile] (\autoref{sec:setup})\\
-    A pile on which cards can be trashed. A four-of-a-kind must be trashed on to one of these to win. Their use is described in \autoref{sec:trashcard}, \autoref{sec:collect}, \autoref{sec:createtrashpile} and \autoref{sec:swap}.
+    A pile on which cards can be trashed. A four-of-a-kind must be trashed on to one of these to win. Their use is described in \autoref{sec:trashcard}, \autoref{sec:collect}, \autoref{sec:litter} and \autoref{sec:swap}.
   \item[Trashing] (\autoref{sec:trashcard})\\
     To play a card on a Trash Pile.
 \end{description}
