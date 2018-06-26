@@ -23,19 +23,8 @@
 \renewcommand{\subsectionautorefname}{§}
 \renewcommand{\subsubsectionautorefname}{§}
 \renewcommand{\paragraphautorefname}{¶}
+%HEVEA\renewcommand{\hrule}{\@hr{}{}}
 
-\newcommand\copyrightfooter{
-  \medskip
-  \hrule
-
-  {
-    \small
-    \includegraphics[scale=0.5]{cc-by.eps}\\
-    This work is licensed under the Creative Commons Attribution 4.0
-    International License. To view a copy of this license, visit
-    \url{http://creativecommons.org/licenses/by/4.0/} or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
-  }
-}
 
 \begin{document}
 \title{\thegame{}\\ \large A card game, v\theversion}
@@ -43,12 +32,15 @@
 \date{\today}
 \maketitle
 
+%HEVEA\begin{center}\textit{This document is also available as a \href{https://github.com/jmbtutor/one-mans-trash/releases/download/v\theversion{}/one-mans-trash-\theversion{}.pdf}{PDF}. The PDF is authoritative for any discrepancies between it and this document.}\end{center}
+
+%HEVEA\hrule
 \tableofcontents
+%HEVEA\hrule
 
 \newpage
 
-\section{Requirements}
-\label{sec:requirements}
+\section{Requirements \label{sec:requirements}}
 
 \thegame{} requires 2 -- 6 players and a standard deck of cards (with 2 Jokers if available).
 
@@ -57,8 +49,7 @@ If Jokers are available, then these Jokers are considered the ``Trash Collectors
 If Jokers are not available, remove two Aces.
 The two remaining Aces are considered the Trash Collectors.
 
-\section{Setup}
-\label{sec:setup}
+\section{Setup \label{sec:setup}}
 
 \begin{enumerate}
   \item Determine a player order.
@@ -68,13 +59,11 @@ The two remaining Aces are considered the Trash Collectors.
   \item Put the remaining cards face-down to form the Draw Pile.
 \end{enumerate}
 
-\section{Rules}
-\label{sec:rules}
+\section{Rules \label{sec:rules}}
 
 The aim of the game is to empty your hand by trashing a four-of-a-kind on to a Trash Pile.
 
-\subsection{Gameplay}
-\label{sec:gameplay}
+\subsection{Gameplay \label{sec:gameplay}}
 
 Play proceeds in turns. On your turn, you must perform one of five actions: pick up from the Draw Pile, trash a card, collect the trash, litter, or swap a card.
 
@@ -83,96 +72,90 @@ If you run out of cards in your hand and you did not meet the win condition (\au
 In addition, on your turn or between turns, you may inspect the Trash Piles (taking care not to disturb the order of the cards) or ask any player about the number of cards in their hand.
 
 \newpage
-\subsubsection{Pick Up From the Draw Pile}
-\label{sec:draw}
+\subsubsection{Pick Up From the Draw Pile \label{sec:draw}}
 
 On your turn, you may choose to draw from the Draw Pile to add a card to your hand.
 
-\paragraph{} \label{par:drawnormal}
+\paragraph{\label{par:drawnormal}}
 Draw one card from the Draw Pile and add it to your hand.
 
-\paragraph{} \label{par:drawempty}
+\paragraph{\label{par:drawempty}}
 You may not pick up from the Draw Pile if the Draw Pile is empty.
 
 Your turn ends when the card is drawn.
 
-\subsubsection{Trash a Card}
-\label{sec:trashcard}
+\subsubsection{Trash a Card \label{sec:trashcard}}
 
 On your turn, you may choose to trash a card to remove a card from your hand.
 
-\paragraph{} \label{par:trashvalid}
+\paragraph{\label{par:trashvalid}}
 Place the card you want to trash on the top of a Trash Pile whose top card is no more than one rank away from the card you want to trash. Suits are not significant. For example, if the top card of a Trash pile has a rank of 7, you may trash any card with a rank of 6, 7 or 8 on it.
 The ranks are ordered in their usual manner with Aces low if not used as Trash Collectors.
 
-\paragraph{} \label{par:trashwraparound}
+\paragraph{\label{par:trashwraparound}}
 The rank ``wraps around'', so you may place an Ace on a King and vice versa. If Aces are used as Trash Collectors, then King and 2 are adjacent ranks.
 
-\paragraph{} \label{par:trashmultiple}
+\paragraph{\label{par:trashmultiple}}
 You may trash multiple cards together on the same Trash Pile as long as all cards being trashed have the same rank.
 
-\paragraph{} \label{par:trashmultiplepiles}
+\paragraph{\label{par:trashmultiplepiles}}
 You may not trash on more than one Trash Pile per turn.
 
-\paragraph{} \label{par:trashwild}
+\paragraph{\label{par:trashwild}}
 Any card may be trashed on a Trash Collector (but note \autoref{par:trashplaycollector}).
 
-\paragraph{} \label{par:trashplayoncollector}
+\paragraph{\label{par:trashplayoncollector}}
 If a card is trashed on a Trash Collector, pick up the Trash Collector and place it in your hand.
 
-\paragraph{} \label{par:trashplaycollector}
+\paragraph{\label{par:trashplaycollector}}
 Trash Collectors cannot be trashed. See \autoref{sec:collect} for rules about playing Trash Collectors.
 
 Your turn ends after your card has been trashed.
 
-\subsubsection{Collect the Trash}
-\label{sec:collect}
+\subsubsection{Collect the Trash \label{sec:collect}}
 
 If you have a Trash Collector in your hand, you may choose to ``collect the trash'' (pick up a Trash Pile).
 
-\paragraph{} \label{par:collectplay}
+\paragraph{\label{par:collectplay}}
 Collect the cards from a single Trash Pile into your hand and leave a Trash Collector from your hand in its place.
 
-\paragraph{} \label{par:collectcollector}
+\paragraph{\label{par:collectcollector}}
 You may collect any Trash Pile, including one that is occupied by another Trash Collector.
 
-\paragraph{} \label{par:collectsingle}
+\paragraph{\label{par:collectsingle}}
 You may not collect more than one Trash Pile per turn. You may not play more than one Trash Collector per turn.
 
 Your turn ends when the Trash Pile is collected.
 
-\subsubsection{Litter}
-\label{sec:litter}
+\subsubsection{Litter \label{sec:litter}}
 
 On your turn, you may choose to ``litter'' (create a new Trash Pile).
 
-\paragraph{} \label{par:littercreate}
+\paragraph{\label{par:littercreate}}
 Place a single card on the table to form a new Trash Pile. Multiple cards may not be used to create a new Trash Pile.
 
-\paragraph{} \label{par:litterrestriction}
+\paragraph{\label{par:litterrestriction}}
 You may not create a new Trash Pile if the card you play is a valid play on any other Trash Pile. In particular, this means that any Trash Collectors present on the table prevents new Trash Piles from being created because any card is a valid play on it. Similarly, you may not create a new Trash Pile with a Trash Collector because it is a valid play on any existing Trash Pile.
 
 Your turn ends when the new Pile is created.
 
 \newpage
-\subsubsection{Swap a Card}
-\label{sec:swap}
+\subsubsection{Swap a Card \label{sec:swap}}
 
 On your turn, you may choose to swap cards from your hand with the top cards on a Trash Pile.
 
-\paragraph{} \label{par:swaptop}
+\paragraph{\label{par:swaptop}}
 Swap a card from your hand with the top card of a Trash Pile.
 
-\paragraph{} \label{par:swapmultiple}
+\paragraph{\label{par:swapmultiple}}
 You may swap multiple cards from your hand if the cards have the same rank and if there are at least the same number of cards on the top of the Trash Pile with the same rank. For example, if the top of the Trash Pile has two 4s and you have two 8s in your hand, you may swap those two 8s for those two 4s, assuming that 4s are not restricted (\autoref{par:swaprestriction}).
 
-\paragraph{} \label{par:swaprestriction}
+\paragraph{\label{par:swaprestriction}}
 You may not swap cards if the card you swap from your hand is a valid play on any Trash Pile. This means that you may not swap cards of the same rank (e.g. a 2 for a 2), nor when there is a Trash Collector on the table. Note that playing on a Trash Collector is considered trashing and not a swap (\autoref{par:trashplayoncollector}), and it may be done even if that card can otherwise be played on another Trash Pile.
 
 Your turn ends after the swap.
 
-\subsection{Winning}
-\label{sec:winning}
+\subsection{Winning \label{sec:winning}}
 
 To win, you must empty your hand by trashing four cards of the same rank together. Remember that it is illegal to litter with more than one card (\autoref{par:littercreate}), so this four-of-a-kind must be trashed on an existing Pile.
 
@@ -182,12 +165,9 @@ If you run out of cards without having emptied it by trashing a four-of-a-kind, 
 
 If you are the last remaining player, you lose.
 
-\copyrightfooter
-
 \newpage
 \appendix
-\section{Glossary}
-\label{sec:glossary}
+\section{Glossary \label{sec:glossary}}
 
 \begin{description}
   \item[Draw Pile] (\autoref{sec:draw})\\
@@ -203,8 +183,7 @@ If you are the last remaining player, you lose.
 \end{description}
 
 \newpage
-\section{Credits}
-\label{sec:credits}
+\section{Credits \label{sec:credits}}
 
 \thegame{} was developed by:
 Bruce Chen,
@@ -217,6 +196,27 @@ Johann Tutor.
 This document was written by:
 Johann Tutor.
 
-\copyrightfooter
+% Copyright footer
+\medskip
+\hrule
+
+{
+  \small
+%BEGIN LATEX
+  \begin{wrapfigure}{L}{0.175\textwidth}
+%END LATEX
+    \includegraphics[scale=0.5]{cc-by.eps}
+%BEGIN LATEX
+  \end{wrapfigure}
+%END LATEX
+
+  \copyright 2017--2018, Johann Tutor.
+
+  This work is licensed under the Creative Commons Attribution 4.0
+  International License. To view a copy of this license, visit
+  \url{http://creativecommons.org/licenses/by/4.0/} or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
+  This document was typeset with \LaTeX. The source code and updates are available on GitHub: \url{https://github.com/jmbtutor/one-mans-trash}
+}
 
 \end{document}
