@@ -10,7 +10,7 @@
 \usepackage{inconsolata}
 \usepackage{hyperref}
 
-\newcommand\theversion{1.1.1}
+\newcommand\theversion{1.2.0-git}
 \newcommand\thegame{One Man's Trash}
 
 \hypersetup{
@@ -62,6 +62,8 @@ The two remaining Aces are considered the Trash Collectors.
 \section{Rules \label{sec:rules}}
 
 The aim of the game is to empty your hand by trashing a four-of-a-kind on to a Trash Pile.
+
+The Trash Piles are where you make your plays. A Trash Pile can either be a stack of cards such that the rank of each card is no more than one away from the rank of the card below it, or it can be a lone Trash Collector.
 
 \subsection{Gameplay \label{sec:gameplay}}
 
@@ -121,6 +123,7 @@ Collect the cards from a single Trash Pile into your hand and leave a Trash Coll
 
 \paragraph{\label{par:collectcollector}}
 You may collect any Trash Pile, including one that is occupied by another Trash Collector.
+Note that collecting a Trash Collector is effectively a null move that swaps the Trash Collector in your hand for the Trash Collector in the Trash Pile.
 
 \paragraph{\label{par:collectsingle}}
 You may not collect more than one Trash Pile per turn. You may not play more than one Trash Collector per turn.
@@ -177,7 +180,7 @@ If you are the last remaining player, you lose.
   \item[Trash Collector] (\autoref{sec:requirements})\\
     The two Jokers, or the two Aces in play if Jokers are not available. Their use is described in \autoref{par:trashplaycollector} and \autoref{par:trashplaycollector}.
   \item[Trash Pile] (\autoref{sec:setup})\\
-    A pile on which cards can be trashed. A four-of-a-kind must be trashed on to one of these to win. Their use is described in \autoref{sec:trashcard}, \autoref{sec:collect}, \autoref{sec:litter} and \autoref{sec:swap}.
+    A pile on which cards can be trashed; it is either a stack of cards such that the rank of each card is no more than one away from the rank of the card below it, or it is a lone Trash Collector. A four-of-a-kind must be trashed on to a Trash Pile to win. Their use is described in \autoref{sec:trashcard}, \autoref{sec:collect}, \autoref{sec:litter} and \autoref{sec:swap}.
   \item[Trashing] (\autoref{sec:trashcard})\\
     Playing a card on a Trash Pile.
 \end{description}
