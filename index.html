@@ -26,14 +26,14 @@ blockquote{margin-left:4ex;margin-right:4ex;text-align:left;}
 td p{margin:0px;}
 </style>
 <title>One Man's Trash 
-A card game, v1.1.1
+A card game, v1.2.0
 </title>
 </head>
 <body>
 <!--HEVEA command line is: hevea -fix -o index.html -O one-mans-trash.tex -->
 <!--CUT STYLE article--><!--CUT DEF section 1 --><table class="title"><tr><td style="padding:1ex"><h1 class="titlemain">One Man’s Trash<br>
-<span style="font-size:large">A card game, v1.1.1</span></h1><h3 class="titlerest">Johann Tutor</h3><h3 class="titlerest">December 8, 2017</h3></td></tr>
-</table><div class="center"><span class="c002">This document is also available as a </span><a href="https://github.com/jmbtutor/one-mans-trash/releases/download/v1.1.1/one-mans-trash-1.1.1.pdf"><span class="c002">PDF</span></a><span class="c002">. The PDF is authoritative for any discrepancies between it and this document.</span></div><hr><!--TOC section id="sec1" Contents-->
+<span style="font-size:large">A card game, v1.2.0</span></h1><h3 class="titlerest">Johann Tutor</h3><h3 class="titlerest">August 6, 2018</h3></td></tr>
+</table><div class="center"><span class="c002">This document is also available as a </span><a href="https://github.com/jmbtutor/one-mans-trash/releases/download/v1.2.0/one-mans-trash-1.2.0.pdf"><span class="c002">PDF</span></a><span class="c002">. The PDF is authoritative for any discrepancies between it and this document.</span></div><hr><!--TOC section id="sec1" Contents-->
 <h2 class="section" id="sec1">Contents</h2><!--SEC END --><ul class="toc"><li class="li-toc">
 <a href="#sec%3Arequirements">1  Requirements </a>
 </li><li class="li-toc"><a href="#sec%3Asetup">2  Setup </a>
@@ -64,7 +64,7 @@ Determine a player order.
 </li><li class="li-enumerate">Put the remaining cards face-down to form the Draw Pile.
 </li></ol>
 <!--TOC section id="sec:rules" Rules -->
-<h2 class="section" id="sec:rules">3  Rules </h2><!--SEC END --><p>The aim of the game is to empty your hand by trashing a four-of-a-kind on to a Trash Pile.</p>
+<h2 class="section" id="sec:rules">3  Rules </h2><!--SEC END --><p>The aim of the game is to empty your hand by trashing a four-of-a-kind on to a Trash Pile.</p><p>The Trash Piles are where you make your plays. A Trash Pile can either be a stack of cards such that the rank of each card is no more than one away from the rank of the card below it, or it can be a lone Trash Collector.</p>
 <!--TOC subsection id="sec:gameplay" Gameplay -->
 <h3 class="subsection" id="sec:gameplay">3.1  Gameplay </h3><!--SEC END --><p>Play proceeds in turns. On your turn, you must perform one of five actions: pick up from the Draw Pile, trash a card, collect the trash, litter, or swap a card.</p><p>If you run out of cards in your hand and you did not meet the win condition (<a href="#sec%3Awinning">§ 3.2</a>), you lose and are out of the game.</p><p>In addition, on your turn or between turns, you may inspect the Trash Piles (taking care not to disturb the order of the cards) or ask any player about the number of cards in their hand.</p>
 <!--TOC subsubsection id="sec:draw" Pick Up From the Draw Pile -->
@@ -106,7 +106,8 @@ Trash Collectors cannot be trashed. See <a href="#sec%3Acollect">§ 3.1.3</a> f
 Collect the cards from a single Trash Pile into your hand and leave a Trash Collector from your hand in its place.</p>
 <!--TOC paragraph id="par:collectcollector" -->
 <h4 class="paragraph" id="par:collectcollector">3.1.3.2  </h4><!--SEC END --><p>
-You may collect any Trash Pile, including one that is occupied by another Trash Collector.</p>
+You may collect any Trash Pile, including one that is occupied by another Trash Collector.
+Note that collecting a Trash Collector is effectively a null move that swaps the Trash Collector in your hand for the Trash Collector in the Trash Pile.</p>
 <!--TOC paragraph id="par:collectsingle" -->
 <h4 class="paragraph" id="par:collectsingle">3.1.3.3  </h4><!--SEC END --><p>
 You may not collect more than one Trash Pile per turn. You may not play more than one Trash Collector per turn.</p><p>Your turn ends when the Trash Pile is collected.</p>
@@ -140,7 +141,7 @@ You may not swap cards if the card you swap from your hand is a valid play on an
 </dd><dt class="dt-description"><span class="c003">Trash Collector</span></dt><dd class="dd-description"> (<a href="#sec%3Arequirements">§ 1</a>)<br>
  The two Jokers, or the two Aces in play if Jokers are not available. Their use is described in <a href="#par%3Atrashplaycollector">¶ 3.1.2.7</a> and <a href="#par%3Atrashplaycollector">¶ 3.1.2.7</a>.
 </dd><dt class="dt-description"><span class="c003">Trash Pile</span></dt><dd class="dd-description"> (<a href="#sec%3Asetup">§ 2</a>)<br>
- A pile on which cards can be trashed. A four-of-a-kind must be trashed on to one of these to win. Their use is described in <a href="#sec%3Atrashcard">§ 3.1.2</a>, <a href="#sec%3Acollect">§ 3.1.3</a>, <a href="#sec%3Alitter">§ 3.1.4</a> and <a href="#sec%3Aswap">§ 3.1.5</a>.
+ A pile on which cards can be trashed; it is either a stack of cards such that the rank of each card is no more than one away from the rank of the card below it, or it is a lone Trash Collector. A four-of-a-kind must be trashed on to a Trash Pile to win. Their use is described in <a href="#sec%3Atrashcard">§ 3.1.2</a>, <a href="#sec%3Acollect">§ 3.1.3</a>, <a href="#sec%3Alitter">§ 3.1.4</a> and <a href="#sec%3Aswap">§ 3.1.5</a>.
 </dd><dt class="dt-description"><span class="c003">Trashing</span></dt><dd class="dd-description"> (<a href="#sec%3Atrashcard">§ 3.1.2</a>)<br>
  Playing a card on a Trash Pile.
 </dd></dl>
